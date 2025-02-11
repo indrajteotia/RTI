@@ -4,11 +4,11 @@ To know more about Invidious Instance or check other instances: https://docs.inv
 
 # YouTube Redirect to Invidious
 
-This Chrome extension automatically redirects YouTube URLs from `yu.be` and `www.yy.com` domains to an Invidious instance, `inv.n.net`. This can be useful for users who prefer to use Invidious for privacy reasons or to avoid YouTube's tracking and advertisements.
+This Chrome extension automatically redirects YouTube URLs from `youtu.be` and `www.youtube.com` domains to an Invidious instance, `invidious`. This can be useful for users who prefer to use Invidious for privacy reasons or to avoid YouTube's tracking and advertisements.
 
 ## Features
 
-*   **Automatic Redirection:**  Seamlessly redirects YouTube links from `yu.be/*` and `www.yy.com/watch?v=*` to `inv.n.net/watch?v=*`.
+*   **Automatic Redirection:**  Seamlessly redirects `youtube` to `invidious`.
 *   **Privacy-Focused:**  Utilizes Invidious, an open-source, privacy-respecting front-end for YouTube.
 *   **Lightweight:**  Simple and efficient extension with minimal resource usage.
 
@@ -19,7 +19,7 @@ There are two ways to install this extension:
 **1. Load Unpacked (for development and testing):**
 
 1.  Download or clone this repository to your local machine.
-2.  Open Google Chrome.
+2.  Open Google Chrome or any other chromium browser.
 3.  Go to `chrome://extensions/` in the address bar.
 4.  Enable "Developer mode" in the top right corner of the page.
 5.  Click "Load unpacked" in the top left corner.
@@ -46,13 +46,8 @@ There are two ways to install this extension:
 
 Once installed, the extension works automatically in the background.
 
-1.  Simply click on any YouTube link that uses the `yu.be` or `www.yy.com/watch?v` format.
-2.  The extension will automatically redirect you to the same video on the `inv.n.net` Invidious instance.
-
-You can verify that the extension is working by:
-
-*   Visiting a `yu.be` or `www.yy.com/watch?v` link and observing that you are redirected to `inv.n.net`.
-*   Checking the extension icon in your Chrome toolbar (if you've included an icon in your `manifest.json`).
+1.  Simply click on any YouTube link that uses the `youtu.be` or `www.youtube.com/watch?v` format.
+2.  The extension will automatically redirect you to the same video on the `inv.nadeko.net` Invidious instance.
 
 ## Repository Contents
 
@@ -63,7 +58,7 @@ You can verify that the extension is working by:
 
 ## Important Notes
 
-*   **Invidious Instance:** This extension currently redirects to `inv.n.net`. You can easily change this to another Invidious instance by modifying the `rules.json` file and replacing `inv.n.net` with your preferred instance URL. You can find a list of public Invidious instances [here](https://redirect.invidious.io/api/v1/instances.json). (Note: Link may be outdated, please search for "Invidious instances list" for the latest list).
+*   **Invidious Instance:** This extension currently redirects to `inv.nadeko.net`. You can easily change this to another Invidious instance by modifying the `rules.json` file and replacing `inv.nadeko.net` with your preferred instance URL. You can find a list of public Invidious instances [here](https://redirect.invidious.io/api/v1/instances.json). (Note: Link may be outdated, please search for "Invidious instances list" for the latest list).
 *   **Permissions:** This extension requires the following permissions:
     *   `declarativeNetRequest`, `declarativeNetRequestFeedback`, `declarativeNetRequestWithHostAccess`: Necessary for efficient URL redirection.
     *   `host_permissions` for `https://yu.be/*` and `https://www.yy.com/*`:  Allows the extension to intercept requests to these domains.
