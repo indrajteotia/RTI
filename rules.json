@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "host": "inv.nadeko.net",
+          "pathPrefix": "/watch",
+          "queryTransform": {
+            "v": "{extra}"
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "https://youtu.be/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "host": "inv.nadeko.net",
+          "pathPrefix": "/watch",
+          "queryTransform": {
+            "v": "{extra}"
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "https://www.youtube.com/watch?v=*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

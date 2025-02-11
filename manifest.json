@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "RTI",
+  "version": "1.0",
+  "description": "Automatically redirects YouTube URLs to an Invidious instance.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "https://youtu.be/*",
+    "https://www.youtube.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "redirectRules",
+        "path": "rules.json",
+        "enabled": true
+      }
+    ]
+  }
+}
